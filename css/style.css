@@ -1,0 +1,141 @@
+a {
+  transition: all 0.25s ease;
+}
+a:hover {
+  color: #0784b5;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #0784b5;
+}
+
+.floating-item {
+  display: inline-block;
+}
+.floating-item#floating-item1 {
+  background: linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
+  border-radius: 84% 16% 70% 30%/30% 8% 92% 70%;
+  width: 100px;
+  height: 100px;
+  animation: shakeY 10s ease-in-out 0.25s infinite;
+  position: absolute;
+  left: 70px;
+}
+.floating-item#floating-item2 {
+  background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
+  border-radius: 82% 18% 82% 18%/53% 30% 70% 47%;
+  width: 500px;
+  height: 500px;
+  animation: swing 10s ease-in-out 0.25s infinite;
+  position: absolute;
+  left: 70px;
+  opacity: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.floating-item#floating-item3 {
+  width: 75%;
+  height: 75%;
+  animation: swing 10s ease-in-out 0.25s infinite;
+  position: absolute;
+  left: 70px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #192428;
+  transition: all 0.75s ease-in-out;
+}
+
+body.darkmode {
+  background-color: #192428;
+  color: #ffffff;
+  transition: all 0.75s ease-in-out;
+  /* Custom theme */
+  /* End of custom theme */
+}
+body.darkmode h1,
+body.darkmode h2,
+body.darkmode h3,
+body.darkmode h4,
+body.darkmode h5 {
+  color: #ffffff;
+}
+body.darkmode #header .navbar-brand {
+  color: #ffffff;
+}
+body.darkmode #header .nav-link {
+  color: #ffffff;
+}
+body.darkmode #header .nav-link:hover {
+  color: #39ace7;
+  transition: all 0.5s ease-in-out;
+}
+
+#header {
+  border-bottom: 2px solid #0784b5;
+}
+#header .navbar-brand {
+  color: #192428;
+}
+#header .navbar-toggler {
+  border: 0;
+}
+#header .navbar-toggler:focus, #header .navbar-toggler:active, #header .navbar-toggler:hover {
+  box-shadow: none;
+  border: none;
+  color: #0784b5;
+}
+#header .nav-link {
+  color: #192428;
+}
+@media screen and (max-width: 576px) {
+  #header .nav-link {
+    padding-left: 1rem;
+  }
+}
+#header .nav-link:hover {
+  color: #0784b5;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer {
+  border-top: 2px solid #0784b5;
+}
+.footer .footer-copyright {
+  padding: 0.5rem 0;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+.footer .footer-copyright span {
+  color: #0784b5;
+}
+.footer .footer-social-links .nav-link {
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 576px) {
+  .footer .footer-social-links .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+.footer .footer-social-links .nav-link:hover {
+  color: #0784b5;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,34 @@
+// Darkmode
+
+body.darkmode {
+  background-color: $color-5;
+  color: $text-color;
+  transition: all .75s ease-in-out;
+
+  /* Custom theme */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $text-color;
+  }
+
+  #header {
+
+    .navbar-brand {
+      color: $text-color;
+    }
+
+    .nav-link {
+      color: $text-color;
+
+      &:hover {
+        color: $color-1;
+        transition: all .5s ease-in-out;
+      }
+    }
+  }
+  /* End of custom theme */
+}

@@ -13,15 +13,16 @@ a {
 }
 
 h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: $primary;
-  }
+h2,
+h3,
+h4,
+h5 {
+  color: $primary;
+}
 
 .floating-item {
   display: inline-block;
+  z-index: 0;
 
   &#floating-item1 {
     background: linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
@@ -30,7 +31,7 @@ h1,
     height: 100px;
     animation: shakeY 10s ease-in-out .25s infinite;
     position: absolute;
-    left: 70px
+    left: 70px;
   }
 
   &#floating-item2 {
@@ -45,15 +46,27 @@ h1,
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+  }
+
+  &#floating-item4 {
+    background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
+    border-radius: 82% 18% 82% 18% / 53% 30% 70% 47%  ;
+    width: 500px;
+    height: 500px;
+    animation: swing 10s ease-in-out .25s infinite;
+    position: absolute;
+    top: 700px;
+    left: -70px;
+    opacity: .1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &#floating-item3 {
     width: 75%;
     height: 75%;
     animation: swing 10s ease-in-out .25s infinite;
-    position: absolute;
-    left: 70px;
   }
 }
 
@@ -96,6 +109,8 @@ body {
 
   .nav-link {
     color: $color-5;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @media screen and (max-width: $breakpoint-sm) {
       padding-left: 1rem;

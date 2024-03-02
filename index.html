@@ -18,14 +18,23 @@
 
 
   <main>
-    <div class="container-fluid">
+    <div class="container-fluid" style="position: relative; overflow: hidden;">
+
+      <!-- Floating objects -->
+      <div id="floating-item1" class="floating-item"></div>
+      <div id="floating-item2" class="floating-item">
+        <img id="floating-item3" src="./img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
+      </div>
+
+      <div id="floating-item4" class="floating-item">
+        <img id="floating-item3" src="./img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
+      </div>
+      <!-- End of floating objects -->
+
       <div class="row justify-content-center">
-        <div class="col-lg-3 py-5 d-flex justify-content-center">
-          <div id="floating-item2" class="floating-item">
-              <img id="floating-item3" src="./img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
-            
-          </div>
-        </div>
+
+
+
         <div class="col-lg-6">
 
           <!-- Header -->
@@ -60,11 +69,11 @@
           <section class="hero mt-5">
             <h1 class="hero-title">Momo The Great</h1>
             <p class="hero-p">Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Dolores at, mollitia officiis hic cupiditate pariatur tenetur illum, facilis, possimus quo vitae harum, minus similique. Ipsum mollitia, debitis! Consectetur, dignissimos. Minima.</p>
+            <p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Placeat, architecto dicta cupiditate officiis ducimus ad adipisci iusto quae quo nihil, dolore sit tempora! Quos illo in delectus praesentium, repellat molestiae unde magni harum nostrum exercitationem nobis amet itaque architecto esse quasi inventore laboriosam modi at assumenda blanditiis obcaecati. Molestias accusantium sunt iure corrupti at aperiam in dolorum debitis nam, recusandae modi sapiente culpa vel facilis reprehenderit ratione nostrum quasi sequi ducimus placeat ea. Cum consequatur officiis necessitatibus alias accusantium ea deleniti quibusdam eius eos voluptatum voluptates recusandae doloribus sequi aperiam enim, beatae sapiente. Aliquam veniam iure sunt tempora rem perspiciatis recusandae blanditiis, numquam, animi, iste expedita quos unde voluptates assumenda mollitia dolor laborum velit dolore libero ut. Dolore, veritatis eius rerum repudiandae est unde delectus explicabo saepe tempora culpa dolores voluptatibus ipsa laborum, quidem neque libero voluptates nulla, ut? Fugiat inventore odit fuga nihil suscipit incidunt soluta illo, dolor deserunt excepturi eum dolore modi optio magnam doloribus dicta veniam at commodi impedit? Dicta dolorum excepturi ullam minus quibusdam eveniet, ipsam, odio reiciendis dolor, error, doloremque magni! Nostrum, iste. Unde ea quae aperiam minus ipsa commodi laborum, voluptas est veritatis libero, accusamus sint expedita, reprehenderit excepturi iste adipisci saepe ut? Quisquam ab autem nihil saepe deleniti fugit dolores sapiente aliquid quae eius, reiciendis. Deserunt natus quidem ipsam inventore explicabo ducimus similique necessitatibus exercitationem harum doloremque architecto labore perspiciatis neque mollitia, maiores voluptate vitae, dolor dicta quam, quos illum at laboriosam? Incidunt enim quisquam amet voluptas ex eaque sequi! Eveniet, omnis facere, odio soluta aspernatur voluptas, temporibus ex quo voluptatibus eligendi nobis ad quae? Aliquam praesentium quod ex facilis deserunt, facere! Facere repellendus quibusdam dignissimos, velit, accusantium esse ipsum possimus praesentium iusto, vel veniam. Nesciunt sed omnis distinctio qui dolores id architecto minima nostrum quasi necessitatibus quibusdam voluptatum, quod asperiores molestiae maiores.</p>
           </section>
           <!-- End Of Hero Section -->
 
-          <section class="footer mt-5 d-flex justify-content-between">
-            <p class="footer-copyright">by <span>Momo<i class="fa fa-cat"></i></span> himself</p>
+          <section class="footer mt-5 d-flex flex-column flex-sm-row justify-content-between align-items-center">
             <ul class="footer-social-links nav justify-content-center align-items-center">
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -87,11 +96,9 @@
                 </a>
               </li>
             </ul>
+            <p class="footer-copyright order-sm-0">by <span>Momo<i class="fa fa-cat"></i></span> himself</p>
           </section>
 
-        </div>
-        <div class="col-lg-3 py-5 d-flex justify-content-center">
-          <div id="floating-item1" class="floating-item"></div>
         </div>
       </div>
     </div>

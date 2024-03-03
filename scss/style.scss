@@ -4,6 +4,7 @@
 @import "variables";
 
 a {
+  text-decoration: none;
   transition: all .25s ease;
   &:hover {
     color: $primary;
@@ -119,6 +120,36 @@ body {
     &:hover {
       color: $primary;
       transition: all .5s ease-in-out;
+    }
+  }
+}
+
+// Recent Posts
+.recent {
+  #{&}-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    border-radius: 5px;
+    padding: 1rem;
+    border-image: linear-gradient(#743ad5, #d53a9d) 30;
+    border-width: 4px;
+    border-style: solid;
+
+    &:hover {
+      border-image: linear-gradient($primary, $primary) 30;
+      letter-spacing: inherit;
+      transition: all .5s ease;
+    }
+  }
+
+  #{&}-card-bottom {
+    color: $color-5;
+
+    i {
+      margin-right: 5px;
+      color: $primary;
     }
   }
 }

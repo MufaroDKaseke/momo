@@ -1,4 +1,5 @@
 a {
+  text-decoration: none;
   transition: all 0.25s ease;
 }
 a:hover {
@@ -95,6 +96,12 @@ body.darkmode #header .nav-link:hover {
   color: #39ace7;
   transition: all 0.5s ease-in-out;
 }
+body.darkmode .recent-card-bottom {
+  color: #ffffff;
+}
+body.darkmode .recent-card-bottom i {
+  color: #0784b5;
+}
 
 #header {
   border-bottom: 2px solid #0784b5;
@@ -123,6 +130,30 @@ body.darkmode #header .nav-link:hover {
 #header .nav-link:hover {
   color: #0784b5;
   transition: all 0.5s ease-in-out;
+}
+
+.recent .recent-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  border-radius: 5px;
+  padding: 1rem;
+  border-image: linear-gradient(#743ad5, #d53a9d) 30;
+  border-width: 4px;
+  border-style: solid;
+}
+.recent .recent-card:hover {
+  border-image: linear-gradient(#0784b5, #0784b5) 30;
+  letter-spacing: inherit;
+  transition: all 0.5s ease;
+}
+.recent .recent-card-bottom {
+  color: #192428;
+}
+.recent .recent-card-bottom i {
+  margin-right: 5px;
+  color: #0784b5;
 }
 
 .footer {

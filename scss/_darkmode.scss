@@ -30,5 +30,16 @@ body.darkmode {
       }
     }
   }
+
+  // Recent Posts
+  .recent {
+    &-card-bottom {
+      color: $text-color;
+
+      i {
+        color: $primary;
+      }
+    }
+  }
   /* End of custom theme */
 }

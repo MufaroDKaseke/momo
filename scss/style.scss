@@ -208,12 +208,16 @@ body {
   #{&}-img {
     background: linear-gradient(rgb(48 35 174 / 14%), rgb(6 2 41 / 95%)), url(../img/post-bg.jpg) center / cover;
     padding: .75rem;
-    height: 300px;
+    min-height: 300px;
     border-image: linear-gradient(#743ad5, #d53a9d) 30;
     border-width: 4px;
     border-style: solid;
     display: flex;
     align-items: end;
+
+    @media screen and (max-width: $breakpoint-md) {
+      min-height: 200px;
+    }
   }
 
   #{&}-date {

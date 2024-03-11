@@ -197,12 +197,17 @@ body.darkmode .recent-card-bottom i {
 .post .post-img {
   background: linear-gradient(rgba(48, 35, 174, 0.14), rgba(6, 2, 41, 0.95)), url(../img/post-bg.jpg) center/cover;
   padding: 0.75rem;
-  height: 300px;
+  min-height: 300px;
   border-image: linear-gradient(#743ad5, #d53a9d) 30;
   border-width: 4px;
   border-style: solid;
   display: flex;
   align-items: end;
+}
+@media screen and (max-width: 768px) {
+  .post .post-img {
+    min-height: 200px;
+  }
 }
 @media screen and (max-width: 768px) {
   .post .post-date {

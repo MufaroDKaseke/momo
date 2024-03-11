@@ -152,6 +152,81 @@ body {
       color: $primary;
     }
   }
+
+  #{&}-link {
+    color: $text-color;
+
+    &:hover {
+      color: $primary;
+      transition: all .5s ease-in-out;
+    }
+  }
+}
+
+// Posts
+.posts {
+  #{&}-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    border-radius: 5px;
+    border-image: linear-gradient(#743ad5, #d53a9d) 30;
+    border-width: 4px;
+    border-style: solid;
+
+    &:hover {
+      border-image: linear-gradient($primary, $primary) 30;
+      letter-spacing: inherit;
+      transition: all .5s ease;
+    }
+  }
+
+  #{&}-card-bottom {
+    color: $color-5;
+
+    i {
+      margin-right: 5px;
+      color: $primary;
+    }
+  }
+
+  #{&}-link {
+    color: $text-color;
+
+    &:hover {
+      color: $primary;
+      transition: all .5s ease-in-out;
+    }
+  }
+}
+
+// Post
+.post {
+
+  #{&}-img {
+    background: linear-gradient(rgb(48 35 174 / 14%), rgb(6 2 41 / 95%)), url(../img/post-bg.jpg) center / cover;
+    padding: .75rem;
+    height: 300px;
+    border-image: linear-gradient(#743ad5, #d53a9d) 30;
+    border-width: 4px;
+    border-style: solid;
+    display: flex;
+    align-items: end;
+  }
+
+  #{&}-date {
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: .9rem;
+    }
+  }
+
+  #{&}-date, #{&}-date {
+    @media screen and (max-width: $breakpoint-md) {
+      font-size: .9rem;
+    }
+  }
 }
 
 // Footer

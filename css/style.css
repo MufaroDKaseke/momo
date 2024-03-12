@@ -132,12 +132,24 @@ body.darkmode .recent-card-bottom i {
   transition: all 0.5s ease-in-out;
 }
 
+.hero .hero-img {
+  background: url("../img/profile.jpg") center/cover;
+  width: 200px;
+  height: 200px;
+  border-image: linear-gradient(#743ad5, #d53a9d) 30;
+  border-width: 4px;
+  border-style: solid;
+}
+.hero .hero-title span {
+  color: #0784b5;
+  font-size: 1rem;
+}
+
 .recent .recent-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100%;
-  border-radius: 5px;
   padding: 1rem;
   border-image: linear-gradient(#743ad5, #d53a9d) 30;
   border-width: 4px;

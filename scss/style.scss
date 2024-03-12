@@ -124,6 +124,26 @@ body {
   }
 }
 
+// Hero
+.hero {
+  #{&}-img {
+    background: url('../img/profile.jpg') center / cover;
+    width: 200px;
+    height: 200px;
+    border-image: linear-gradient(#743ad5, #d53a9d) 30;
+    border-width: 4px;
+    border-style: solid;
+  }
+
+  #{&}-title {
+
+    span {
+      color: $primary;
+      font-size:  1rem;
+    }
+  }
+}
+
 // Recent Posts
 .recent {
   #{&}-card {
@@ -131,7 +151,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100%;
-    border-radius: 5px;
     padding: 1rem;
     border-image: linear-gradient(#743ad5, #d53a9d) 30;
     border-width: 4px;

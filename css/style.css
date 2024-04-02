@@ -157,6 +157,9 @@ body.darkmode .footer .footer-social-links .nav-link {
   padding-left: 0.5rem;
   border-left: 3px solid #0784b5;
 }
+.hero .hero-contact-p a {
+  color: #39ace7;
+}
 
 .recent .recent-card {
   display: flex;

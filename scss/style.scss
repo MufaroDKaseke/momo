@@ -150,6 +150,12 @@ body {
     padding-left: .5rem;
     border-left: 3px solid $primary;
   }
+
+  #{&}-contact-p {
+    a {
+      color: $color-1;
+    }
+  }
 }
 
 // Recent Posts

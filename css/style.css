@@ -18,15 +18,29 @@ h5 {
 .floating-item {
   display: inline-block;
   z-index: 0;
+  /*   &#floating-item1 {
+      background: linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
+      border-radius: 84% 16% 70% 30% / 30% 8% 92% 70%;
+      width: 100px;
+      height: 100px;
+      animation: shakeY 10s ease-in-out .25s infinite;
+      position: absolute;
+      left: 70px;
+    } */
 }
 .floating-item#floating-item1 {
-  background: linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
-  border-radius: 84% 16% 70% 30%/30% 8% 92% 70%;
-  width: 100px;
-  height: 100px;
-  animation: shakeY 10s ease-in-out 0.25s infinite;
+  background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
+  border-radius: 82% 18% 82% 18%/53% 30% 70% 47%;
+  width: 500px;
+  height: 500px;
+  animation: swing 10s ease-in-out 0.25s infinite;
   position: absolute;
   left: 70px;
+  opacity: 0.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
 }
 .floating-item#floating-item2 {
   background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
@@ -35,30 +49,17 @@ h5 {
   height: 500px;
   animation: swing 10s ease-in-out 0.25s infinite;
   position: absolute;
-  left: 70px;
-  opacity: 0.1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.floating-item#floating-item4 {
-  background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
-  border-radius: 82% 18% 82% 18%/53% 30% 70% 47%;
-  width: 500px;
-  height: 500px;
-  animation: swing 10s ease-in-out 0.25s infinite;
-  position: absolute;
   top: 700px;
-  left: -70px;
-  opacity: 0.1;
+  right: 70px;
+  opacity: 0.2;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -1;
 }
 .floating-item#floating-item3 {
   width: 75%;
   height: 75%;
-  animation: swing 10s ease-in-out 0.25s infinite;
 }
 
 body {
@@ -85,6 +86,9 @@ body.darkmode h3,
 body.darkmode h4,
 body.darkmode h5 {
   color: #ffffff;
+}
+body.darkmode #header .floating-item#floating-item1, body.darkmode #header .floating-item#floating-item2 {
+  opacity: 0.3;
 }
 body.darkmode #header .navbar-brand {
   color: #ffffff;
@@ -207,7 +211,7 @@ body.darkmode .recent-card-bottom i {
 }
 
 .post .post-img {
-  background: linear-gradient(rgba(48, 35, 174, 0.14), rgba(6, 2, 41, 0.95)), url(../img/post-bg.jpg) center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.95)), url(../img/post-bg.jpg) center/cover;
   padding: 0.75rem;
   min-height: 300px;
   border-image: linear-gradient(#743ad5, #d53a9d) 30;

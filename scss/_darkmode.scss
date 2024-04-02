@@ -4,6 +4,7 @@ body.darkmode {
   background-color: $color-5;
   color: $text-color;
   transition: all .75s ease-in-out;
+  font-weight: 400;
 
   /* Custom theme */
 
@@ -15,13 +16,14 @@ body.darkmode {
     color: $text-color;
   }
 
+  .floating-item {
+    &#floating-item1, &#floating-item2 {
+      opacity: .2;
+    }
+  }
+
   #header {
 
-    .floating-item {
-      &#floating-item1, &#floating-item2 {
-        opacity: .3;
-      }
-    }
 
     .navbar-brand {
       color: $text-color;
@@ -44,6 +46,15 @@ body.darkmode {
 
       i {
         color: $primary;
+      }
+    }
+  }
+
+  .footer {
+    .footer-social-links {
+
+      .nav-link {
+        color: $text-color;
       }
     }
   }

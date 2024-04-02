@@ -36,7 +36,7 @@ h5 {
   animation: swing 10s ease-in-out 0.25s infinite;
   position: absolute;
   left: 70px;
-  opacity: 0.2;
+  opacity: 0.4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@ h5 {
   position: absolute;
   top: 700px;
   right: 70px;
-  opacity: 0.2;
+  opacity: 0.4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +70,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: #192428;
+  font-weight: 500;
   transition: all 0.75s ease-in-out;
 }
 
@@ -77,6 +78,7 @@ body.darkmode {
   background-color: #192428;
   color: #ffffff;
   transition: all 0.75s ease-in-out;
+  font-weight: 400;
   /* Custom theme */
   /* End of custom theme */
 }
@@ -87,8 +89,8 @@ body.darkmode h4,
 body.darkmode h5 {
   color: #ffffff;
 }
-body.darkmode #header .floating-item#floating-item1, body.darkmode #header .floating-item#floating-item2 {
-  opacity: 0.3;
+body.darkmode .floating-item#floating-item1, body.darkmode .floating-item#floating-item2 {
+  opacity: 0.2;
 }
 body.darkmode #header .navbar-brand {
   color: #ffffff;
@@ -105,6 +107,9 @@ body.darkmode .recent-card-bottom {
 }
 body.darkmode .recent-card-bottom i {
   color: #0784b5;
+}
+body.darkmode .footer .footer-social-links .nav-link {
+  color: #ffffff;
 }
 
 #header {
@@ -137,7 +142,7 @@ body.darkmode .recent-card-bottom i {
 }
 
 .hero .hero-img {
-  background: url("../img/profile.jpg") center/cover;
+  background: url("../img/me.jpg") center/cover;
   width: 200px;
   height: 200px;
   border-image: linear-gradient(#743ad5, #d53a9d) 30;
@@ -147,6 +152,10 @@ body.darkmode .recent-card-bottom i {
 .hero .hero-title span {
   color: #0784b5;
   font-size: 1rem;
+}
+.hero .hero-p {
+  padding-left: 0.5rem;
+  border-left: 3px solid #0784b5;
 }
 
 .recent .recent-card {
@@ -248,7 +257,7 @@ body.darkmode .recent-card-bottom i {
   color: #0784b5;
 }
 .footer .footer-social-links .nav-link {
-  color: #ffffff;
+  color: #192428;
   transition: all 0.5s ease-in-out;
   font-size: 1.2rem;
 }

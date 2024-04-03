@@ -70,7 +70,7 @@ h5 {
     width: 75%;
     height: 75%; 
     //animation: swing 10s ease-in-out .25s infinite;
-      }
+  }
 }
 
 
@@ -120,7 +120,7 @@ body {
       padding-left: 1rem;
     }
 
-    &:hover {
+    &:hover, &.active {
       color: $primary;
       transition: all .5s ease-in-out;
     }
@@ -179,6 +179,7 @@ body {
 
   #{&}-card-bottom {
     color: $color-5;
+    word-spacing: -2px;
 
     i {
       margin-right: 5px;
@@ -209,11 +210,24 @@ body {
     border-width: 4px;
     border-style: solid;
 
+    h5 {
+      font-weight: 500;
+    }
+
     &:hover {
       border-image: linear-gradient($primary, $primary) 30;
       letter-spacing: inherit;
       transition: all .5s ease;
+
+      h5 {
+        color: $primary;
+        transition: all .5s ease;
+      }
     }
+  }
+
+  p {
+    color: darken($text-color, 20%);
   }
 
   #{&}-card-bottom {

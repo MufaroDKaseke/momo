@@ -98,7 +98,7 @@ body.darkmode #header .navbar-brand {
 body.darkmode #header .nav-link {
   color: #ffffff;
 }
-body.darkmode #header .nav-link:hover {
+body.darkmode #header .nav-link:hover, body.darkmode #header .nav-link.active {
   color: #39ace7;
   transition: all 0.5s ease-in-out;
 }
@@ -107,6 +107,9 @@ body.darkmode .recent-card-bottom {
 }
 body.darkmode .recent-card-bottom i {
   color: #0784b5;
+}
+body.darkmode .posts-card-bottom {
+  color: #ffffff;
 }
 body.darkmode .footer .footer-social-links .nav-link {
   color: #ffffff;
@@ -136,7 +139,7 @@ body.darkmode .footer .footer-social-links .nav-link {
     padding-left: 1rem;
   }
 }
-#header .nav-link:hover {
+#header .nav-link:hover, #header .nav-link.active {
   color: #0784b5;
   transition: all 0.5s ease-in-out;
 }
@@ -178,6 +181,7 @@ body.darkmode .footer .footer-social-links .nav-link {
 }
 .recent .recent-card-bottom {
   color: #192428;
+  word-spacing: -2px;
 }
 .recent .recent-card-bottom i {
   margin-right: 5px;
@@ -202,10 +206,20 @@ body.darkmode .footer .footer-social-links .nav-link {
   border-width: 4px;
   border-style: solid;
 }
+.posts .posts-card h5 {
+  font-weight: 500;
+}
 .posts .posts-card:hover {
   border-image: linear-gradient(#0784b5, #0784b5) 30;
   letter-spacing: inherit;
   transition: all 0.5s ease;
+}
+.posts .posts-card:hover h5 {
+  color: #0784b5;
+  transition: all 0.5s ease;
+}
+.posts p {
+  color: #cccccc;
 }
 .posts .posts-card-bottom {
   color: #192428;

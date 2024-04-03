@@ -32,7 +32,7 @@ body.darkmode {
     .nav-link {
       color: $text-color;
 
-      &:hover {
+      &:hover, &.active {
         color: $color-1;
         transition: all .5s ease-in-out;
       }
@@ -47,6 +47,13 @@ body.darkmode {
       i {
         color: $primary;
       }
+    }
+  }
+
+  // Posts
+  .posts {
+    &-card-bottom {
+      color: $text-color;
     }
   }
 

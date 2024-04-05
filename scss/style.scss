@@ -321,3 +321,25 @@ body {
     }
   }
 }
+
+
+// 404 Page
+.not-found{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-weight: 600;
+  }
+
+  a {
+    color: $text-color;
+    background: $primary;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+}

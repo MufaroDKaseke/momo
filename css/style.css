@@ -293,4 +293,21 @@ body.darkmode .footer .footer-social-links .nav-link {
   transition: all 0.5s ease-in-out;
 }
 
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.not-found h1 {
+  font-weight: 600;
+}
+.not-found a {
+  color: #ffffff;
+  background: #0784b5;
+}
+.not-found a:hover {
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -15,6 +15,10 @@ h5 {
   color: #0784b5;
 }
 
+.btn-primary {
+  background: #09a8e6;
+}
+
 .floating-item {
   display: inline-block;
   z-index: 0;

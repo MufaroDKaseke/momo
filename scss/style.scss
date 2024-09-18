@@ -21,6 +21,10 @@ h5 {
   color: $primary;
 }
 
+.btn-primary {
+  background: lighten($primary, 10%);
+}
+
 .floating-item {
   display: inline-block;
   z-index: 0;

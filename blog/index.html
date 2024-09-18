@@ -10,9 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
   <!-- Plugin -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="./vendor/animate.css/animate.min.css">
-  <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="darkmode">
 
@@ -21,13 +21,12 @@
     <div class="container-fluid" style="position: relative; overflow: hidden;">
 
       <!-- Floating objects -->
-      <div id="floating-item1" class="floating-item"></div>
-      <div id="floating-item2" class="floating-item">
-        <img id="floating-item3" src="./img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
+      <div id="floating-item1" class="floating-item">
+        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
       </div>
 
-      <div id="floating-item4" class="floating-item">
-        <img id="floating-item3" src="./img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
+      <div id="floating-item2" class="floating-item">
+        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
       </div>
       <!-- End of floating objects -->
 
@@ -40,7 +39,7 @@
           <!-- Header -->
           <nav id="header" class="navbar navbar-dark navbar-expand-sm">
             <div class="container-fluid py-2 px-0">
-              <a href="./" class="navbar-brand">Momo</a>
+              <a href="/" class="navbar-brand">Momo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <!--<span class="navbar-toggler-icon"></span>-->
                 <i class="fas fa-bars-staggered"></i>
@@ -48,13 +47,13 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link active" href="/blog/">Blog</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Builds</a>
+                    <a class="nav-link" href="/builds/">Builds</a>
                   </li>
                   <li class="nav-item">
                     <a id="modeToggler" class="nav-link" href="#"><i class="fas fa-sun"></i></a>
@@ -67,24 +66,24 @@
 
           <!-- Posts -->
           <section class="posts mt-5">
-            <h2 class="mb-5">Blog</h2>
+            <h2 class="section-title mb-5">Blog <i class="fas fa-blog"></i></h2>
             <div class="row">
               <div class="col-md-6 pb-3">
-                <a href="#" class="posts-card">
-                  <h5 class="mb-1">Lorem ipsum, dolor sit amet.</h5>
-                  <p class="text-muted small">Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Sed vero, similique aliquid, officia impedit ratione odio a laborum quam eveniet.</p>
+                <a href="./2024/5/tech_job_market_who_survives.html" class="posts-card">
+                  <h5 class="mb-1">2024 Tech Job Market, who survives the crisis?</h5>
+                  <p class="small">Job market reality check: layoffs, outsourcing, competition, AI and future-proofing for aspiring tech professionals.</p>
                   <div class="posts-card-bottom">
-                    <i class="fas fa-eye"></i>1000
+                    <i class="far fa-calendar"></i><span class="postDateContainer" data-date="05/21/2024"></span>
                   </div>
                 </a>
               </div>
               <div class="col-md-6">
                 <div class="row">
-                  <div class="col-6 col-md-12 pb-3">
+                  <!-- <div class="col-6 col-md-12 pb-3">
                     <a href="#" class="posts-card">
                       <h5 class="mb-3">Lorem ipsum, dolor sit amet.</h5>
                       <div class="posts-card-bottom">
-                        <i class="fas fa-eye"></i>1000
+                        <i class="far fa-calendar"></i>3 days ago
                       </div>
                     </a>
                   </div>
@@ -92,10 +91,10 @@
                     <a href="#" class="posts-card">
                       <h5 class="mb-3">Lorem ipsum, dolor sit amet.</h5>
                       <div class="posts-card-bottom">
-                        <i class="fas fa-eye"></i>1000
+                        <i class="far fa-calendar"></i>1 day ago
                       </div>
                     </a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -137,31 +136,33 @@
           <!-- End Of Posts -->
 
 
+          <!-- Footer Section -->
           <section class="footer mt-5 d-flex flex-column flex-sm-row justify-content-between align-items-center">
             <ul class="footer-social-links nav justify-content-center align-items-center">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="https://github.com/MufaroDKaseke" class="nav-link">
+                  <i class="fab fa-square-github"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/" class="nav-link">
                   <i class="fab fa-square-instagram"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="fab fa-square-youtube"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="https://www.facebook.com/mufaro.kaseke.568" class="nav-link">
                   <i class="fab fa-square-facebook"></i>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="https://twitter.com/KasekeMufaro" class="nav-link">
                   <i class="fab fa-square-x-twitter"></i>
                 </a>
               </li>
             </ul>
             <p class="footer-copyright order-sm-0">by <span>Momo<i class="fa fa-cat"></i></span> himself</p>
           </section>
+          <!-- End Of Footer Section -->
 
 
         </div>
@@ -175,7 +176,15 @@
   <!-- Plugins (JS) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="./js/main.js"></script>
-  
+  <script src="/js/main.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WQ0XC9EWY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3WQ0XC9EWY');
+  </script>
 </body>
 </html>

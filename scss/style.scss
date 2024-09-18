@@ -21,11 +21,15 @@ h5 {
   color: $primary;
 }
 
+.btn-primary {
+  background: lighten($primary, 10%);
+}
+
 .floating-item {
   display: inline-block;
   z-index: 0;
 
-  &#floating-item1 {
+/*   &#floating-item1 {
     background: linear-gradient(45deg, #3023AE 0%, #FF0099 100%);
     border-radius: 84% 16% 70% 30% / 30% 8% 92% 70%;
     width: 100px;
@@ -33,6 +37,21 @@ h5 {
     animation: shakeY 10s ease-in-out .25s infinite;
     position: absolute;
     left: 70px;
+  } */
+
+  &#floating-item1 {
+    background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
+    border-radius: 82% 18% 82% 18% / 53% 30% 70% 47%  ;
+    width: 500px;
+    height: 500px;
+    animation: swing 10s ease-in-out .25s infinite;
+    position: absolute;
+    left: 70px;
+    opacity: .4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
   }
 
   &#floating-item2 {
@@ -42,32 +61,19 @@ h5 {
     height: 500px;
     animation: swing 10s ease-in-out .25s infinite;
     position: absolute;
-    left: 70px;
-    opacity: .1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &#floating-item4 {
-    background: linear-gradient(45deg, #FF0099 0%, #3023AE 100%);
-    border-radius: 82% 18% 82% 18% / 53% 30% 70% 47%  ;
-    width: 500px;
-    height: 500px;
-    animation: swing 10s ease-in-out .25s infinite;
-    position: absolute;
     top: 700px;
-    left: -70px;
-    opacity: .1;
+    right: 70px;
+    opacity: .4;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
   }
 
   &#floating-item3 {
     width: 75%;
-    height: 75%;
-    animation: swing 10s ease-in-out .25s infinite;
+    height: 75%; 
+    //animation: swing 10s ease-in-out .25s infinite;
   }
 }
 
@@ -80,7 +86,14 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   color: $color-5;
+  font-weight: 500;
   transition: all .75s ease-in-out;
+}
+
+.section-title {
+  i {
+    color: lighten($primary, 10%);
+  }
 }
 
 
@@ -117,7 +130,7 @@ body {
       padding-left: 1rem;
     }
 
-    &:hover {
+    &:hover, &.active {
       color: $primary;
       transition: all .5s ease-in-out;
     }
@@ -127,7 +140,7 @@ body {
 // Hero
 .hero {
   #{&}-img {
-    background: url('../img/profile.jpg') center / cover;
+    background: url('../img/me.jpg') center / cover;
     width: 200px;
     height: 200px;
     border-image: linear-gradient(#743ad5, #d53a9d) 30;
@@ -140,6 +153,17 @@ body {
     span {
       color: $primary;
       font-size:  1rem;
+    }
+  }
+
+  #{&}-p {
+    padding-left: .5rem;
+    border-left: 3px solid $primary;
+  }
+
+  #{&}-contact-p {
+    a {
+      color: $color-1;
     }
   }
 }
@@ -165,6 +189,7 @@ body {
 
   #{&}-card-bottom {
     color: $color-5;
+    word-spacing: -2px;
 
     i {
       margin-right: 5px;
@@ -195,11 +220,24 @@ body {
     border-width: 4px;
     border-style: solid;
 
+    h5 {
+      font-weight: 500;
+    }
+
     &:hover {
       border-image: linear-gradient($primary, $primary) 30;
       letter-spacing: inherit;
       transition: all .5s ease;
+
+      h5 {
+        color: $primary;
+        transition: all .5s ease;
+      }
     }
+  }
+
+  p {
+    color: darken($text-color, 20%);
   }
 
   #{&}-card-bottom {
@@ -225,7 +263,7 @@ body {
 .post {
 
   #{&}-img {
-    background: linear-gradient(rgb(48 35 174 / 14%), rgb(6 2 41 / 95%)), url(../img/post-bg.jpg) center / cover;
+    background: linear-gradient(rgb(0 0 0 / 14%), rgb(0 0 0 / 95%)), url(../img/post-bg.jpg) center / cover;
     padding: .75rem;
     min-height: 300px;
     border-image: linear-gradient(#743ad5, #d53a9d) 30;
@@ -270,7 +308,7 @@ body {
   #{&}-social-links {
 
     .nav-link {
-      color: $text-color;
+      color: $color-5;
       transition: all .5s ease-in-out;
       font-size: 1.2rem;
 
@@ -284,6 +322,28 @@ body {
         color: $primary;
         transition: all .5s ease-in-out;
       }
+    }
+  }
+}
+
+
+// 404 Page
+.not-found{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-weight: 600;
+  }
+
+  a {
+    color: $text-color;
+    background: $primary;
+
+    &:hover {
+      color: $text-color;
     }
   }
 }

@@ -146,6 +146,11 @@ body {
     border-image: linear-gradient(#743ad5, #d53a9d) 30;
     border-width: 4px;
     border-style: solid;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 100%;
+      height: same-as-width;
+    }
   }
 
   #{&}-title {

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    
+    :root {
+      --primary:        #09a8e6;
+      --darker-primary: #055b7c;
+      --white:          #ffffff;
+      --black:          #000000;
+      --gray:           #36464c;
+    }
+
+    body {
+      background: var(--gray);
+      color: var(--white);
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      margin: 0;
+    }
+    
+    .cv-profile-img {
+      width: 65%;
+      height: auto;
+      border: 5px solid var(--primary);
+      box-sizing: border-box;
+      border-radius: 50%;
+    }
+    
+    .container {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      color: var(--primary);
+      text-align: center;
+    }
+
+    h4 {
+    }
+    
+    #name {
+      margin-bottom: 0;
+    }
+    
+    #role {
+      color: var(--white);
+      margin: 1rem auto;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      background-color: var(--primary);
+      border: none;
+      padding: .5rem 1rem;
+      margin: auto .5rem;
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      background-color: var(--darker-primary);
+      transition: background-color .5s ease-in;
+    }
+
+    table {
+      width: 80%;
+      border: 2px solid var(--white);
+      margin: 2rem 10%;
+    }
+
+    table th {
+      width: 50%;
+      color: var(--primary);
+      border: 1px solid var(--white);
+      border-bottom: 2px solid var(--white);
+    }
+
+    table td {
+      width: 50%;
+      text-align: center;
+    }
+
+    .skills {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+    
+    .skills li {
+      display: inline-block;
+      font-size: .7rem;
+      color: var(--primary);
+      background-color: var(--white);
+      padding: .25rem .5rem;
+      border-radius: 5px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <div class="container">
+    
+    <img src="./img/momo.jpg" alt="" class="cv-profile-img">
+    
+    <h2 id="name">MUFARO D KASEKE</h2>
+    <h4 id="role">Web Developer</h4>
+
+    <div class="btn-container">
+      <button id="contactBtn" class="btn">Contact Me</button><button id="hireBtn" class="btn">Hire</button>
+    </div>
+    
+    <br/>
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Education</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Olevel</td>
+          <td>Passed</td>
+        </tr>
+        <tr>
+          <td>Alevel</td>
+          <td>Passed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>PHP</li>
+      <li>Apache</li>
+      <li>MySQL</li>
+      <li>Ubuntu Server</li>
+      <li>Git</li>
+      <li>Plesk</li>
+      <li>AWS</li>
+    </ul>
+  </div>
+  
+  
+  <script>
+    const contactBtn = document.getElementById('contactBtn');
+    const hireBtn = document.getElementById('hireBtn');
+
+    // Open alert for contact button
+    contactBtn.addEventListener('click', function() {
+      alert('Call this number, +263780948498\nDo not spam please!');
+    });
+
+    hireBtn.addEventListener('click', function() {
+      alert('Welp, sorry I am pretty busy!!!\nMaybe another time...');
+    });
+  </script>
+</body>
+</html>

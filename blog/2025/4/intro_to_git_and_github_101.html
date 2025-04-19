@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2024 Tech Job Market, who survives?</title>
+  <meta name="description"
+  content="Job market reality check: layoffs, outsourcing, competition, AI and future-proofing for aspiring tech professionals.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+  <!-- Plugin -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Include Prism -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+  
+  <link href="https://momo.co.zw" rel="canonical">
+  
+  <!-- Required Open Graph data -->
+  <meta property="og:title" content="Git It Together: A Friendly Guide to Git & GitHub" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://momo.co.zw/img/layoffs.jpg" />
+  <meta property="og:url" content="https://momo.co.zw/blog/2025/4/intro_to_git_and_github_101.html" />
+  <!-- Optional Open Graph data -->
+  <!--<meta property="og:audio" content="https://example.com/guide.mp3." />-->
+  <meta property="og:description"
+  content="A practical introduction to Git and GitHub for beginners. Understand version control, branching, and collaboration step-by-step." />
+  <meta property="og:site_name" content="Momo" />
+  <meta property="og:locale" content="en_us" />
+  
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+</head>
+
+<body class="darkmode">
+  
+  
+  <main>
+    <div class="container-fluid" style="position: relative; overflow: hidden;">
+      
+      <!-- Floating objects -->
+      <div id="floating-item1" class="floating-item">
+        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
+      </div>
+      
+      <div id="floating-item2" class="floating-item">
+        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
+      </div>
+      <!-- End of floating objects -->
+      
+      <div class="row justify-content-center">
+        
+        
+        
+        <div class="col-lg-6">
+          
+          <!-- Header -->
+          <nav id="header" class="navbar navbar-dark navbar-expand-sm">
+            <div class="container-fluid py-2 px-0">
+              <a href="/" class="navbar-brand">Momo</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <!--<span class="navbar-toggler-icon"></span>-->
+              <i class="fas fa-bars-staggered"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/builds/">Builds</a>
+                </li>
+                <li class="nav-item">
+                  <a id="modeToggler" class="nav-link" href="#"><i class="fas fa-sun"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Of Header -->
+        
+        <!-- Posts -->
+        <section class="post mt-3">
+          <div class="post-img"
+          style="background: linear-gradient(rgb(0 0 0 / 14%), rgb(44 33 65 / 95%)), url(/img/git_and_github.png) center / cover;">
+          <h3>Git It Together: A Friendly Guide to Git & GitHub</h3>
+        </div>
+        <div class="d-flex justify-content-between py-3 mb-4">
+          <div class="post-date">
+            <i class="far fa-clock"></i> April 19, 2025
+          </div>
+          <div class="post-author">
+            by <span>Momo<i class="fa fa-cat"></i></span>
+          </div>
+        </div>
+        <p class="muted">
+          <strong>Introduction to Git & GitHub: Your First Steps into Version Control</strong><br /><br />
+          
+          Whether you're building your first website, collaborating on a team, or contributing to open source — Git and GitHub
+          are tools every developer should know. This guide will walk you through the essentials to get up and
+          running.<br /><br />
+          
+          <strong>What’s the Difference?</strong><br /><br />
+          
+          Git is a version control system. It helps you track changes to your code, revert to previous versions, and work on
+          features without affecting your main project.<br /><br/>
+          GitHub is a platform for hosting and collaborating on Git repositories. It lets you share your work, contribute to
+          others’ code, and maintain a professional portfolio of your projects.<br /><br />
+          
+          <strong>Setting Up Git</strong><br /><br />
+          
+          First, install Git from <a href="https://git-scm.com">git-scm.com</a> and configure your identity:<br />
+        </p>
+        
+        <pre><code class="language-bash">git config --global user.name "Your Name"
+git config --global user.email "your@email.com"</code></pre>
+        
+        <p class="muted">
+          This ensures your commits are linked to your name and email address.<br /><br />
+          
+          <strong>Starting a Project with Git</strong><br /><br />
+          
+          Navigate to your project folder and initialize Git:<br />
+        </p>
+        
+        <pre><code class="language-bash">git init</code></pre>
+        
+        <p class="muted">
+          This creates a hidden .git directory where Git will track your project’s changes.<br /><br />
+          
+          Next, stage your files and commit the first version:<br />
+        </p>
+        
+        <pre><code class="language-bash">git add .
+git commit -m "Initial commit"</code></pre>
+          
+          <p class="muted">
+            git add . stages all changes, and git commit saves a snapshot with your message.<br /><br />
+            
+            <strong>Connecting to GitHub</strong><br /><br />
+            
+            Create a new repository on GitHub (leave it empty), then link your local repo and push your code:<br />
+          </p>
+          
+          <pre><code class="language-bash">git remote add origin https://github.com/yourusername/your-repo.git
+git branch -M main
+git push -u origin main</code></pre>
+            
+            <p class="muted">
+              Your project is now live on GitHub.<br /><br />
+              
+              <strong>Everyday Git Commands</strong><br /><br />
+              
+              Here are some commands you’ll use daily:<br /><br />
+              
+              git status – See current changes and staging info<br />
+              git log – View your commit history<br />
+              git diff – See what has changed before committing<br />
+              git pull – Sync with GitHub<br />
+              git push – Upload changes to GitHub<br />
+              git clone &lt;url&gt; – Copy a GitHub repo to your machine<br /><br />
+              
+              <strong>Branching & Collaboration</strong><br /><br />
+              
+              When working on a new feature, use branches to keep things isolated:<br />
+            </p>
+            
+            <pre><code class="language-bash">git checkout -b new-feature
+# make your changes
+git add .
+git commit -m "Add new feature"
+git push origin new-feature</code></pre>
+              
+              <p class="muted">
+                Then, open a Pull Request (PR) on GitHub to propose your changes and merge them after review.<br /><br />
+                
+                <strong>Wrap-Up</strong><br /><br />
+                
+                With these few commands, you can:<br />
+                - Track your code changes locally<br />
+                - Work with others on the same project<br />
+                - Back up and showcase your code on GitHub<br /><br />
+                
+                <strong>What’s Next?</strong><br /><br />
+                
+                - Learn how to use .gitignore to exclude files<br />
+                - Explore how to resolve merge conflicts<br />
+                - Contribute to open-source projects<br /><br />
+                
+                Want to take it further? Try using Git with VS Code, add SSH for GitHub, or dive into GitHub Actions for automation.
+              </p>
+            </section>
+            <!-- End Of Posts -->
+            
+            
+            <!-- Footer Section -->
+            <section class="footer mt-5 d-flex flex-column flex-sm-row justify-content-between align-items-center">
+              <ul class="footer-social-links nav justify-content-center align-items-center">
+                <li class="nav-item">
+                  <a href="https://github.com/MufaroDKaseke" class="nav-link">
+                    <i class="fab fa-square-github"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.instagram.com/" class="nav-link">
+                    <i class="fab fa-square-instagram"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://www.facebook.com/mufaro.kaseke.568" class="nav-link">
+                    <i class="fab fa-square-facebook"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://twitter.com/KasekeMufaro" class="nav-link">
+                    <i class="fab fa-square-x-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+              <p class="footer-copyright order-sm-0">by <span>Momo<i class="fa fa-cat"></i></span> himself</p>
+            </section>
+            <!-- End Of Footer Section -->
+            
+            
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    
+    
+    
+    <!-- Plugins (JS) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WQ0XC9EWY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3WQ0XC9EWY');
+    </script>
+  </body>
+  
+  </html>

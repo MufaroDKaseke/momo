@@ -3,77 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Momo</title>
-  <!-- Fonts -->
+  <meta name="theme-color" content="#192428">
+  <title>Page not found — Mufaro Kaseke</title>
+  <meta name="description" content="This page could not be found. Return to Momo’s portfolio, blog or builds.">
+  <link rel="canonical" href="https://momo.co.zw/404.html">
+  <link rel="icon" type="image/svg+xml" href="/img/cat-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-  <!-- Plugin -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
-  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- <script>
-    function getDays(postDate) {
-      const now = new Date();
-      postDate = new Date(postDate);
-      let diff = now.getTime() - postDate.getTime() ;
-      return Math.round(diff / (1000 * 3600 * 24));
-    }
-  </script> -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/pages.js" type="module"></script>
+  <meta property="og:title" content="Page not found">
+  <meta property="og:description" content="This page could not be found. Return to Momo’s portfolio, blog or builds.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://momo.co.zw/404.html">
+  <meta property="og:image" content="https://momo.co.zw/img/portrait-900.jpg">
+  <meta property="og:image:alt" content="Page not found">
+  <meta property="og:site_name" content="Momo">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Page not found">
+  <meta name="twitter:description" content="This page could not be found. Return to Momo’s portfolio, blog or builds.">
+  <meta name="twitter:image" content="https://momo.co.zw/img/portrait-900.jpg">
+  <meta name="twitter:image:alt" content="Page not found">
+  <meta name="robots" content="noindex, follow">
+
 </head>
-<body class="darkmode">
-
-
-  <main>
-    <div class="container-fluid" style="position: relative; overflow: hidden;">
-
-      <!-- Floating objects -->
-      <div id="floating-item1" class="floating-item">
-        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
-      </div>
-
-      <div id="floating-item2" class="floating-item">
-        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item" style="transform: scaleX(-1);">
-      </div>
-      <!-- End of floating objects -->
-
-      <div class="row justify-content-center">
-
-
-
-        <div class="col-lg-6">
-
-          <!-- 404 Page -->
-          <section class="not-found">
-            <div class="text-center">
-              <h1 class="display-3">404</h1>
-              <p>Page not found!</p>
-              <a href="/" class="btn"><i class="fas fa-link"></i> Home</a>
-            </div>
-          </section>
-          <!-- End Of 404 Page -->
-        </div>
-      </div>
-    </div>
-  </main>
-
-
-
-
-  <!-- Plugins (JS) -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
-  <!-- Google tag (gtag.js) -->
+<body class="interior-page error-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header container">
+      <a class="brand" href="/" aria-label="Momo — Home"><img src="/img/cat-logo.svg" alt="" width="32" height="32"> Momo</a>
+      <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path class="menu-top" d="M3 6h18"/><path class="menu-middle" d="M3 12h18"/><path class="menu-bottom" d="M3 18h12"/></svg></button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><a href="/">Home</a><a href="/#projects">Projects</a><a href="/blog/">Blog</a><a href="/builds/">Builds</a></nav>
+      <div class="header-actions"><a class="button button-primary" href="/#contact">Get in touch</a></div>
+    </header>
+    <main class="container not-found-page" id="main-content" tabindex="-1"><img src="/img/cat-astronaut.svg" alt="" width="180" height="180"><p class="eyebrow">Signal lost · 404</p><h1>Lost in orbit?</h1><p>This page could not be found. Let's get you back to familiar territory.</p><div class="not-found-actions"><a class="button button-primary" href="/">Back home</a><a class="button" href="/blog/">Read the blog</a><a class="button" href="/builds/">Explore builds</a></div></main>
+    <footer class="site-footer container"><div class="footer-left"><nav class="footer-links" aria-label="Social links"><a href="https://github.com/MufaroDKaseke">GitHub</a><a href="https://www.linkedin.com/in/mufaro-darlington-kaseke-4070b9204">LinkedIn</a><a href="https://twitter.com/KasekeMufaro">X</a><a href="https://www.facebook.com/mufaro.kaseke.568">Facebook</a></nav></div><p class="copyright">© 2026 Mufaro Kaseke · by Momo himself</p></footer>
+  </div>
+  <p class="sr-only" role="status" aria-live="polite" data-interaction-status></p>
+  <!-- Existing Google Analytics measurement ID retained. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WQ0XC9EWY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-3WQ0XC9EWY');
   </script>
-  
 </body>
 </html>

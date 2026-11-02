@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" fill="none">
+  <defs><pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse"><path d="M46 0H0v46" stroke="#31464D" stroke-width="1"/></pattern><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#14201F"/><stop offset="1" stop-color="#29213D"/></linearGradient></defs>
+  <path fill="url(#ground)" d="M0 0h800v460H0z"/><path fill="url(#grid)" d="M0 0h800v460H0z"/>
+  <path d="M-20 365 250 120l150 190L690 25M140 480l160-230 300-55 220 80" stroke="#31464D" stroke-width="28"/>
+  <path d="M140 480l160-230 300-55 220 80" stroke="#39ACE7" stroke-width="2" stroke-dasharray="5 9"/>
+  <g stroke="#39ACE7" stroke-width="3" fill="#192428"><circle cx="300" cy="250" r="14"/><circle cx="600" cy="195" r="14"/><circle cx="214" cy="358" r="10"/></g>
+  <path d="M420 132c-36 0-64 28-64 64 0 47 64 107 64 107s64-60 64-107c0-36-28-64-64-64Z" fill="#192428" stroke="#39ACE7" stroke-width="4"/><circle cx="420" cy="195" r="23" fill="#203944" stroke="#E0509F" stroke-width="3"/>
+  <text x="40" y="410" fill="#98A6AB" font-family="monospace" font-size="13" letter-spacing="2">BITES MAP · LOCATION / DISCOVERY</text>
+</svg>

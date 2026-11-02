@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" fill="none" stroke-linecap="round">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#14201F"/><stop offset="1" stop-color="#29213D"/></linearGradient></defs>
+  <path fill="url(#bg)" d="M0 0h1200v420H0z"/>
+  <g stroke-width="3">
+    <path stroke="#39ACE7" d="M80 300h1040"/>
+    <path stroke="#E0509F" d="M300 300c65 0 65-130 130-130h330c65 0 65 130 130 130"/>
+    <path stroke="#9B5DE5" d="M520 300c40 0 45-60 80-60h100"/>
+    <g fill="#192428" stroke="#39ACE7"><circle cx="120" cy="300" r="10"/><circle cx="300" cy="300" r="10"/><circle cx="520" cy="300" r="10"/><circle cx="890" cy="300" r="10"/></g>
+    <circle cx="1060" cy="300" r="10" fill="#39ACE7" stroke="#39ACE7"/>
+    <circle cx="430" cy="170" r="10" fill="#192428" stroke="#E0509F"/>
+    <circle cx="760" cy="170" r="10" fill="#E0509F" stroke="#E0509F"/>
+    <circle cx="600" cy="240" r="9" fill="#192428" stroke="#9B5DE5"/>
+  </g>
+  <g font-family="monospace" font-size="16"><text fill="#98A6AB" x="90" y="350">main</text><text fill="#E0509F" x="380" y="143">new-feature</text></g>
+</svg>

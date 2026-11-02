@@ -3,243 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#192428">
   <title>Builds — Mufaro Kaseke</title>
   <meta name="description" content="Smaller builds, side projects and open-source experiments by Mufaro Kaseke — web apps, tooling and infrastructure scripts.">
-  <!-- Fonts -->
+  <link rel="canonical" href="https://momo.co.zw/builds/">
+  <link rel="icon" type="image/svg+xml" href="/img/cat-logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
-  <!-- Plugin -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="/vendor/animate.css/animate.min.css">
-  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/pages.js" type="module"></script>
+  <meta property="og:title" content="Builds">
+  <meta property="og:description" content="Smaller builds, side projects and open-source experiments by Mufaro Kaseke — web apps, tooling and infrastructure scripts.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://momo.co.zw/builds/">
+  <meta property="og:image" content="https://momo.co.zw/img/portrait-900.jpg">
+  <meta property="og:image:alt" content="Builds">
+  <meta property="og:site_name" content="Momo">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Builds">
+  <meta name="twitter:description" content="Smaller builds, side projects and open-source experiments by Mufaro Kaseke — web apps, tooling and infrastructure scripts.">
+  <meta name="twitter:image" content="https://momo.co.zw/img/portrait-900.jpg">
+  <meta name="twitter:image:alt" content="Builds">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Builds — Mufaro Kaseke", "url": "https://momo.co.zw/builds/", "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Bites Map", "url": "https://bitesmap.co.zw"}, {"@type": "ListItem", "position": 2, "name": "Swazy", "url": "https://swazy.co.zw"}, {"@type": "ListItem", "position": 3, "name": "Monitra", "url": "https://github.com/MufaroDKaseke/service_status_tracker"}, {"@type": "ListItem", "position": 4, "name": "mysql-s3-backup", "url": "https://github.com/MufaroDKaseke/mysql-s3-backup"}, {"@type": "ListItem", "position": 5, "name": "dush", "url": "https://github.com/MufaroDKaseke/dush"}, {"@type": "ListItem", "position": 6, "name": "web_cli_chat", "url": "https://github.com/MufaroDKaseke/web_cli_chat"}]}}</script>
 </head>
-<body class="darkmode">
-
-
-  <main>
-    <div class="container-fluid" style="position: relative; overflow: hidden;">
-
-      <!-- Floating objects -->
-      <div id="floating-item1" class="floating-item">
-        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item">
-      </div>
-
-      <div id="floating-item2" class="floating-item">
-        <img id="floating-item3" src="/img/noun-cat-astronaut-5679855.svg" alt="" class="floating-item" style="transform: scaleX(-1);">
-      </div>
-      <!-- End of floating objects -->
-
-      <div class="row justify-content-center">
-
-
-
-        <div class="col-lg-8 col-xl-7">
-
-          <!-- Header -->
-          <nav id="header" class="navbar navbar-dark navbar-expand-sm">
-            <div class="container-fluid py-2 px-0">
-              <a href="/" class="navbar-brand">Momo</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars-staggered"></i>
-              </button>
-              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/#projects">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="/builds/">Builds</a>
-                  </li>
-                  <li class="nav-item">
-                    <a id="modeToggler" class="nav-link" href="#"><i class="fas fa-sun"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-          <!-- End Of Header -->
-
-          <!-- Builds -->
-          <section class="projects mt-5">
-            <h2 class="section-title mb-2">Builds <i class="fas fa-screwdriver-wrench"></i></h2>
-            <p class="section-lead mb-4">Side projects, client work and open-source experiments. For the flagship work, see <a href="/#projects">Selected Projects</a>.</p>
-            <div class="row g-3">
-
-              <div class="col-md-6">
-                <div class="projects-card">
-                  <div class="project-head">
-                    <h4>Bites Map</h4>
-                    <span class="project-tag">Product</span>
-                  </div>
-                  <p>A location-based restaurant discovery platform for the Zimbabwean market &mdash; explore and filter local food spots by location, cuisine and price, view menus and read verified reviews on a mobile-friendly interface.</p>
-                  <div class="project-links">
-                    <a href="https://bitesmap.co.zw"><i class="fas fa-arrow-up-right-from-square"></i> bitesmap.co.zw</a>
-                  </div>
-                  <ul class="chips">
-                    <li class="chip">PHP</li>
-                    <li class="chip">MySQL</li>
-                    <li class="chip">Google Maps API</li>
-                    <li class="chip">Bootstrap</li>
-                    <li class="chip">AWS EC2</li>
-                    <li class="chip">GitHub Actions</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="projects-card">
-                  <div class="project-head">
-                    <h4>Swazy</h4>
-                    <span class="project-tag">Web</span>
-                  </div>
-                  <p>A modern, minimalist portfolio site for a local hip-hop artist. Integrated the Instagram API for recent posts and the Spotify API for music listings.</p>
-                  <div class="project-links">
-                    <a href="https://swazy.co.zw"><i class="fas fa-arrow-up-right-from-square"></i> swazy.co.zw</a>
-                  </div>
-                  <ul class="chips">
-                    <li class="chip">Bootstrap</li>
-                    <li class="chip">Spotify API</li>
-                    <li class="chip">Instagram API</li>
-                    <li class="chip">GitHub Pages</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="projects-card">
-                  <div class="project-head">
-                    <h4>Monitra</h4>
-                    <span class="project-tag">Tooling</span>
-                  </div>
-                  <p>A service-availability tracker that monitors the uptime and latency of services such as SaaS apps, APIs and websites across environments.</p>
-                  <div class="project-links">
-                    <a href="https://github.com/MufaroDKaseke/service_status_tracker"><i class="fab fa-github"></i> service_status_tracker</a>
-                  </div>
-                  <ul class="chips">
-                    <li class="chip">JavaScript</li>
-                    <li class="chip">Node</li>
-                    <li class="chip">Monitoring</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="projects-card">
-                  <div class="project-head">
-                    <h4>mysql-s3-backup</h4>
-                    <span class="project-tag">DevOps</span>
-                  </div>
-                  <p>A batch script that automates MySQL backups on XAMPP (Windows), uploads them to AWS S3 and cleans up old backups.</p>
-                  <div class="project-links">
-                    <a href="https://github.com/MufaroDKaseke/mysql-s3-backup"><i class="fab fa-github"></i> mysql-s3-backup</a>
-                  </div>
-                  <ul class="chips">
-                    <li class="chip">Batch</li>
-                    <li class="chip">AWS S3</li>
-                    <li class="chip">MySQL</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="projects-card">
-                  <div class="project-head">
-                    <h4>dush</h4>
-                    <span class="project-tag">Library</span>
-                  </div>
-                  <p>A lightweight logging module for Node.js applications.</p>
-                  <div class="project-links">
-                    <a href="https://github.com/MufaroDKaseke/dush"><i class="fab fa-github"></i> dush</a>
-                  </div>
-                  <ul class="chips">
-                    <li class="chip">Node.js</li>
-                    <li class="chip">JavaScript</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="projects-card">
-                  <div class="project-head">
-                    <h4>web_cli_chat</h4>
-                    <span class="project-tag">Web</span>
-                  </div>
-                  <p>A web-based, CLI-style chatroom built with Socket.IO and Express.</p>
-                  <div class="project-links">
-                    <a href="https://github.com/MufaroDKaseke/web_cli_chat"><i class="fab fa-github"></i> web_cli_chat</a>
-                  </div>
-                  <ul class="chips">
-                    <li class="chip">Socket.IO</li>
-                    <li class="chip">Express</li>
-                    <li class="chip">JavaScript</li>
-                  </ul>
-                </div>
-              </div>
-
-            </div>
-            <div class="mt-3">
-              <a href="https://github.com/MufaroDKaseke" class="recent-link">More on GitHub <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </section>
-          <!-- End Of Builds -->
-
-
-          <!-- Footer Section -->
-          <section class="footer mt-5 d-flex flex-column flex-sm-row justify-content-between align-items-center">
-            <ul class="footer-social-links nav justify-content-center align-items-center">
-              <li class="nav-item">
-                <a href="https://github.com/MufaroDKaseke" class="nav-link" aria-label="GitHub">
-                  <i class="fab fa-square-github"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.linkedin.com/in/mufaro-darlington-kaseke-4070b9204" class="nav-link" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://twitter.com/KasekeMufaro" class="nav-link" aria-label="X (Twitter)">
-                  <i class="fab fa-square-x-twitter"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.facebook.com/mufaro.kaseke.568" class="nav-link" aria-label="Facebook">
-                  <i class="fab fa-square-facebook"></i>
-                </a>
-              </li>
-            </ul>
-            <p class="footer-copyright order-sm-0">by <span>Momo<i class="fa fa-cat"></i></span> himself</p>
-          </section>
-          <!-- End Of Footer Section -->
-
-
-        </div>
-      </div>
-    </div>
-  </main>
-
-
-
-
-  <!-- Plugins (JS) -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
-  <!-- Google tag (gtag.js) -->
+<body class="interior-page builds-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header container">
+      <a class="brand" href="/" aria-label="Momo — Home"><img src="/img/cat-logo.svg" alt="" width="32" height="32"> Momo</a>
+      <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path class="menu-top" d="M3 6h18"/><path class="menu-middle" d="M3 12h18"/><path class="menu-bottom" d="M3 18h12"/></svg></button>
+      <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><a href="/">Home</a><a href="/#projects">Projects</a><a href="/blog/">Blog</a><a href="/builds/" class="is-active" aria-current="page">Builds</a></nav>
+      <div class="header-actions"><a class="button button-primary" href="/#contact">Get in touch</a></div>
+    </header>
+    <main class="container interior-main" id="main-content" tabindex="-1" data-catalog="build">
+      <section class="page-intro builds-intro" aria-labelledby="page-title"><p class="eyebrow">Workshop</p><div class="page-title"><h1 id="page-title">Builds</h1><img src="/img/paw.svg" alt="" width="40" height="40"></div><p class="page-description">Side projects, client work and open-source experiments. For the flagship work, see <a href="/#projects">Selected Projects</a>.</p></section>
+      <div class="catalog-controls" data-controls hidden><div class="catalog-toolbar"><div class="filters" role="group" aria-label="Filter builds"><button class="filter" type="button" data-filter="all" aria-pressed="true">All builds</button><button class="filter" type="button" data-filter="product" aria-pressed="false">Product</button><button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button><button class="filter" type="button" data-filter="tooling" aria-pressed="false">Tooling</button><button class="filter" type="button" data-filter="devops" aria-pressed="false">DevOps</button><button class="filter" type="button" data-filter="library" aria-pressed="false">Library</button></div><div class="search-field"><label for="catalog-search">Search builds</label><div class="search-input"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg><input id="catalog-search" type="search" placeholder="project, technology, keyword…" autocomplete="off" spellcheck="false"></div></div></div><p class="results-count" role="status" aria-live="polite" data-result-count></p></div>
+      <article class="featured-build panel" data-item data-category="product" data-search="Bites Map PHP MySQL Google Maps API Bootstrap AWS EC2 GitHub Actions restaurant food Zimbabwe">
+        <figure class="build-art"><img src="/img/builds-map.svg" width="800" height="460" alt="Illustration of connected map locations for Bites Map"><figcaption>Location discovery · Project illustration</figcaption></figure>
+        <div class="build-content"><span class="eyebrow">Featured build</span><h2><a href="https://bitesmap.co.zw">Bites Map</a></h2><p>A location-based restaurant discovery platform for the Zimbabwean market — explore and filter local food spots by location, cuisine and price, view menus and read verified reviews on a mobile-friendly interface.</p><ul class="chips" aria-label="Bites Map technologies"><li class="chip">PHP</li><li class="chip">MySQL</li><li class="chip">Google Maps API</li><li class="chip">Bootstrap</li><li class="chip">AWS EC2</li><li class="chip">GitHub Actions</li></ul><a class="button" href="https://bitesmap.co.zw">Visit Bites Map <span aria-hidden="true">&nbsp;↗</span></a></div>
+      </article>
+      <section class="build-results" aria-labelledby="builds-title" data-result-group><h2 class="builds-heading" id="builds-title">More from the workshop</h2><div class="build-grid"><article class="build-card panel" data-item data-category="web" data-search="Swazy A modern, minimalist portfolio site for a local hip-hop artist. Integrated the Instagram API for recent posts and the Spotify API for music listings. Bootstrap Spotify API Instagram API GitHub Pages"><div class="project-meta"><span class="project-number">BUILD 02</span><span class="chip project-tag">Web</span></div><h3><a href="https://swazy.co.zw">Swazy</a></h3><p>A modern, minimalist portfolio site for a local hip-hop artist. Integrated the Instagram API for recent posts and the Spotify API for music listings.</p><ul class="chips" aria-label="Swazy technologies"><li class="chip">Bootstrap</li><li class="chip">Spotify API</li><li class="chip">Instagram API</li><li class="chip">GitHub Pages</li></ul><a class="build-link" href="https://swazy.co.zw">Visit site <span aria-hidden="true">&nbsp;↗</span><span class="sr-only"> for Swazy</span></a></article><article class="build-card panel" data-item data-category="tooling" data-search="Monitra A service-availability tracker that monitors the uptime and latency of services such as SaaS apps, APIs and websites across environments. JavaScript Node Monitoring"><div class="project-meta"><span class="project-number">BUILD 03</span><span class="chip project-tag">Tooling</span></div><h3><a href="https://github.com/MufaroDKaseke/service_status_tracker">Monitra</a></h3><p>A service-availability tracker that monitors the uptime and latency of services such as SaaS apps, APIs and websites across environments.</p><ul class="chips" aria-label="Monitra technologies"><li class="chip">JavaScript</li><li class="chip">Node</li><li class="chip">Monitoring</li></ul><a class="build-link" href="https://github.com/MufaroDKaseke/service_status_tracker">View source <span aria-hidden="true">&nbsp;↗</span><span class="sr-only"> for Monitra</span></a></article><article class="build-card panel" data-item data-category="devops" data-search="mysql-s3-backup A batch script that automates MySQL backups on XAMPP (Windows), uploads them to AWS S3 and cleans up old backups. Batch AWS S3 MySQL"><div class="project-meta"><span class="project-number">BUILD 04</span><span class="chip project-tag">DevOps</span></div><h3><a href="https://github.com/MufaroDKaseke/mysql-s3-backup">mysql-s3-backup</a></h3><p>A batch script that automates MySQL backups on XAMPP (Windows), uploads them to AWS S3 and cleans up old backups.</p><ul class="chips" aria-label="mysql-s3-backup technologies"><li class="chip">Batch</li><li class="chip">AWS S3</li><li class="chip">MySQL</li></ul><a class="build-link" href="https://github.com/MufaroDKaseke/mysql-s3-backup">View source <span aria-hidden="true">&nbsp;↗</span><span class="sr-only"> for mysql-s3-backup</span></a></article><article class="build-card panel" data-item data-category="library" data-search="dush A lightweight logging module for Node.js applications. Node.js JavaScript"><div class="project-meta"><span class="project-number">BUILD 05</span><span class="chip project-tag">Library</span></div><h3><a href="https://github.com/MufaroDKaseke/dush">dush</a></h3><p>A lightweight logging module for Node.js applications.</p><ul class="chips" aria-label="dush technologies"><li class="chip">Node.js</li><li class="chip">JavaScript</li></ul><a class="build-link" href="https://github.com/MufaroDKaseke/dush">View source <span aria-hidden="true">&nbsp;↗</span><span class="sr-only"> for dush</span></a></article><article class="build-card panel" data-item data-category="web" data-search="web_cli_chat A web-based, CLI-style chatroom built with Socket.IO and Express. Socket.IO Express JavaScript"><div class="project-meta"><span class="project-number">BUILD 06</span><span class="chip project-tag">Web</span></div><h3><a href="https://github.com/MufaroDKaseke/web_cli_chat">web_cli_chat</a></h3><p>A web-based, CLI-style chatroom built with Socket.IO and Express.</p><ul class="chips" aria-label="web_cli_chat technologies"><li class="chip">Socket.IO</li><li class="chip">Express</li><li class="chip">JavaScript</li></ul><a class="build-link" href="https://github.com/MufaroDKaseke/web_cli_chat">View source <span aria-hidden="true">&nbsp;↗</span><span class="sr-only"> for web_cli_chat</span></a></article></div></section>
+      <div class="empty-state" data-empty hidden><img src="/img/cat-sleep.svg" alt="" width="112" height="64"><h2>No builds match</h2><p>Try another search or clear the filters.</p><button class="button" type="button" data-reset>Clear filters</button></div>
+      <div class="builds-outro"><p>More experiments and open-source work on GitHub.</p><a class="button" href="https://github.com/MufaroDKaseke">More on GitHub <span aria-hidden="true">&nbsp;→</span></a></div>
+    </main>
+    <footer class="site-footer container"><div class="footer-left"><nav class="footer-links" aria-label="Social links"><a href="https://github.com/MufaroDKaseke">GitHub</a><a href="https://www.linkedin.com/in/mufaro-darlington-kaseke-4070b9204">LinkedIn</a><a href="https://twitter.com/KasekeMufaro">X</a><a href="https://www.facebook.com/mufaro.kaseke.568">Facebook</a></nav></div><p class="copyright">© 2026 Mufaro Kaseke · by Momo himself</p></footer>
+  </div>
+  <p class="sr-only" role="status" aria-live="polite" data-interaction-status></p>
+  <!-- Existing Google Analytics measurement ID retained. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WQ0XC9EWY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-3WQ0XC9EWY');
   </script>
 </body>

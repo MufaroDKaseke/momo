@@ -17,4 +17,4 @@ python scripts/check_site.py
 node --test tests/interactions.test.mjs
 ```
 
-`css/home.css` provides the shared design tokens and components plus the home layout; `css/pages.css` adds the blog, post, builds and 404 layouts. `js/navigation.js` handles the shared mobile menu, `js/home.js` tracks home sections, and `js/pages.js` handles search, filtering, reading progress, code copy and sharing. Content is rendered in the HTML, so it remains available without JavaScript.
+`css/home.css` provides the shared design tokens and components plus the home layout; `css/pages.css` adds the blog, post, builds and 404 layouts. `css/effects.css` adds cat animations and social icons. `js/navigation.js` handles the shared mobile menu, `js/home.js` tracks home sections, and `js/pages.js` handles search, filtering, reading progress, code copy and sharing. `js/effects.js` handles progressive scroll reveals and the shared animation pause control. It respects reduced-motion preferences and stores the user's pause preference locally. Content and social icons remain available without JavaScript.

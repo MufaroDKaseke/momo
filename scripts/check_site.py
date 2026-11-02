@@ -26,6 +26,7 @@ class Page(HTMLParser):
         self.assets = []
         self.references = []
         self.images = []
+        self.svg_references = []
         self.headings = []
         self.canonical = None
         self.og_url = None
@@ -63,6 +64,9 @@ class Page(HTMLParser):
             for src in a.get('srcset', '').split(','):
                 if src.strip():
                     self.assets.append(src.strip().split()[0])
+        if tag == 'use' and a.get('href', '').startswith('/'):
+            self.assets.append(a['href'])
+            self.svg_references.append(a['href'])
         if tag == 'title':
             self.in_title = True
         for ref in ('aria-controls', 'aria-labelledby', 'aria-describedby'):
@@ -115,6 +119,10 @@ def main():
             if urlsplit(asset).scheme or urlsplit(asset).netloc:
                 continue
             assert resolve_local(page.path, asset).is_file(), f'{route}: missing asset {asset}'
+        for reference in page.svg_references:
+            target = resolve_local(page.path, reference)
+            symbols = {element.attrib.get('id') for element in ET.parse(target).iter()}
+            assert urlsplit(reference).fragment in symbols, f'{route}: missing SVG symbol {reference}'
         for href in page.links:
             assert href and href != '#', f'{route}: placeholder link'
             link_count += 1
@@ -126,8 +134,8 @@ def main():
             if parsed.fragment:
                 target_page = by_path.get(target) or Page(target)
                 assert unquote(parsed.fragment) in target_page.ids, f'{route}: broken anchor {href}'
-    for svg in ('cat-logo.svg', 'cat-astronaut.svg', 'cat-peek.svg', 'cat-sleep.svg', 'paw.svg', 'git-branches.svg', 'builds-map.svg'):
-        ET.parse(ROOT / 'img' / svg)
+    for svg in (ROOT / 'img').glob('*.svg'):
+        ET.parse(svg)
     sitemap = ET.parse(ROOT / 'sitemap.xml')
     locations = {node.text for node in sitemap.findall('.//{*}loc')}
     for route in list(ROUTES)[:5]:

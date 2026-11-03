@@ -1,0 +1,3 @@
+**/node_modules/
+.seo-npm-cache/
+__pycache__/

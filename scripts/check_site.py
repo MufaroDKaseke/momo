@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import json
+import struct
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,7 @@ class Page(HTMLParser):
         self.references = []
         self.images = []
         self.svg_references = []
+        self.metadata = {}
         self.headings = []
         self.canonical = None
         self.og_url = None
@@ -54,6 +56,10 @@ class Page(HTMLParser):
                 self.assets.append(a['href'])
         if tag == 'meta' and a.get('property') == 'og:url':
             self.og_url = a['content']
+        if tag == 'meta':
+            key = a.get('name') or a.get('property')
+            if key:
+                self.metadata.setdefault(key, []).append(a.get('content', ''))
         if tag == 'script':
             self.in_jsonld = a.get('type') == 'application/ld+json'
             if a.get('src'):
@@ -140,8 +146,59 @@ def main():
     locations = {node.text for node in sitemap.findall('.//{*}loc')}
     for route in list(ROUTES)[:5]:
         assert 'https://momo.co.zw' + route in locations, f'{route}: missing from sitemap'
-    assert pages['/blog/2025/4/intro_to_git_and_github_101.html'].title.startswith('Git It Together:'), 'Git post title regression'
-    print(f'PASS: {len(pages)} pages, {link_count} links, local assets and anchors, image dimensions, ARIA references, unique titles, structured data, SVGs and sitemap.')
+    config = json.loads((ROOT / 'content/seo.json').read_text(encoding='utf-8'))
+    origin = config['origin']
+    person_id = origin + '/#person'
+    for expected in config['pages']:
+        page = pages[expected['path']]
+        url = origin + expected['path']
+        image_url = origin + expected['image']
+        assert page.title == expected['title'], f'{url}: stale title'
+        expected_meta = {
+            'description': expected['description'], 'author': config['name'],
+            'og:title': expected['title'], 'og:description': expected['description'],
+            'og:image': image_url, 'og:image:secure_url': image_url,
+            'og:image:type': 'image/png', 'og:image:width': '1200', 'og:image:height': '630',
+            'og:image:alt': expected['imageAlt'], 'og:site_name': config['siteName'],
+            'twitter:card': 'summary_large_image', 'twitter:title': expected['title'],
+            'twitter:description': expected['description'], 'twitter:image': image_url,
+            'twitter:image:alt': expected['imageAlt'],
+        }
+        for key, value in expected_meta.items():
+            assert page.metadata.get(key) == [value], f'{url}: missing, duplicate or stale {key}'
+        assert 'noindex' not in page.metadata['robots'][0], f'{url}: accidentally excluded from indexing'
+        raster = ROOT / expected['image'].lstrip('/')
+        image = raster.read_bytes()
+        assert image[:8] == b'\x89PNG\r\n\x1a\n', f'{url}: share image is not PNG'
+        assert struct.unpack('>II', image[16:24]) == (1200, 630), f'{url}: incorrect share image dimensions'
+        assert len(image) < 500_000, f'{url}: unoptimized share image'
+        graph = page.jsonld[0]['@graph']
+        person = next(node for node in graph if node.get('@id') == person_id)
+        assert person['name'] == config['name'], f'{url}: inconsistent author identity'
+        assert person['image'] == origin + config['portrait'], f'{url}: Person requires the real portrait'
+        assert 'worksFor' not in person, f'{url}: stale current employer'
+        assert any(node.get('@type') == 'WebSite' for node in graph), f'{url}: missing site identity'
+        if expected['kind'] == 'article':
+            article = next(node for node in graph if node.get('@id') == url + '#article')
+            assert article['headline'] == expected['headline'], f'{url}: original headline changed'
+            assert article['datePublished'] == expected['published'], f'{url}: publication date changed'
+            assert article['author']['@id'] == person_id, f'{url}: disconnected author'
+            assert article['image']['url'] == image_url, f'{url}: stale article image'
+            assert any(node.get('@type') == 'BreadcrumbList' for node in graph), f'{url}: missing breadcrumbs'
+    for name, size in [('favicon-48.png', 48), ('favicon-96.png', 96), ('apple-touch-icon.png', 180)]:
+        image = (ROOT / 'img' / name).read_bytes()
+        assert struct.unpack('>II', image[16:24]) == (size, size), f'{name}: incorrect dimensions'
+    legacy = Page(ROOT / 'blog/post.html')
+    assert legacy.metadata['robots'] == ['noindex, follow'], 'Legacy example must not be indexed'
+    assert pages['/404.html'].metadata['robots'] == ['noindex, follow'], '404 must not be indexed'
+    robots = (ROOT / 'robots.txt').read_text(encoding='utf-8')
+    assert 'Sitemap: ' + origin + '/sitemap.xml' in robots, 'Sitemap not declared in robots.txt'
+    assert 'Disallow:' not in robots, 'Unexpected crawl restrictions'
+    sitemap_urls = sitemap.findall('./{*}url')
+    assert {node.find('{*}loc').text for node in sitemap_urls} == {origin + page['path'] for page in config['pages']}, 'Sitemap includes non-content pages'
+    for node in sitemap_urls:
+        assert node.find('{http://www.google.com/schemas/sitemap-image/1.1}image/{http://www.google.com/schemas/sitemap-image/1.1}loc') is not None, 'Missing sitemap image'
+    print(f'PASS: {len(pages)} pages, {link_count} links, assets/anchors, metadata, 5 raster share images, favicons, author graphs, SVGs, indexing controls and image sitemap.')
 
 
 if __name__ == '__main__':

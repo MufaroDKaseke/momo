@@ -1,0 +1,72 @@
+{
+  "origin": "https://momo.co.zw",
+  "name": "Mufaro D Kaseke",
+  "siteName": "Momo",
+  "jobTitle": "Cloud & DevOps Engineer",
+  "portrait": "/img/portrait-900.jpg",
+  "modified": "2026-11-03",
+  "socialProfiles": [
+    "https://github.com/MufaroDKaseke",
+    "https://www.linkedin.com/in/mufaro-darlington-kaseke-4070b9204",
+    "https://twitter.com/KasekeMufaro",
+    "https://www.facebook.com/mufaro.kaseke.568"
+  ],
+  "pages": [
+    {
+      "path": "/",
+      "file": "index.html",
+      "kind": "profile",
+      "title": "Mufaro D Kaseke | Cloud & DevOps Engineer",
+      "description": "Cloud & DevOps engineer based in Zimbabwe, building reliable AWS infrastructure and AI-powered products. Explore my projects, experience and technical writing.",
+      "image": "/img/seo/home.png",
+      "imageAlt": "Mufaro D Kaseke's portrait beside an astronaut cat, with Cloud & DevOps Engineer and momo.co.zw branding.",
+      "card": "home"
+    },
+    {
+      "path": "/blog/",
+      "file": "blog/index.html",
+      "kind": "blog",
+      "title": "Cloud & DevOps Blog | Mufaro D Kaseke",
+      "description": "Notes on cloud, DevOps, Git and building products from Zimbabwe. Tutorials and perspectives from Mufaro D Kaseke.",
+      "image": "/img/seo/blog.png",
+      "imageAlt": "A reading cat beside the words Cloud, DevOps and building, on a dark teal Momo blog card.",
+      "card": "blog"
+    },
+    {
+      "path": "/builds/",
+      "file": "builds/index.html",
+      "kind": "builds",
+      "title": "Projects & Open-Source Builds | Mufaro D Kaseke",
+      "description": "Explore web apps, developer tools and cloud automation by Mufaro D Kaseke, including Bites Map, Monitra and open-source experiments.",
+      "image": "/img/seo/builds.png",
+      "imageAlt": "A cat at a keyboard beside an illustrated terminal and the words Built to do things, branded Momo.",
+      "card": "builds"
+    },
+    {
+      "path": "/blog/2025/4/intro_to_git_and_github_101.html",
+      "file": "blog/2025/4/intro_to_git_and_github_101.html",
+      "kind": "article",
+      "title": "Git & GitHub for Beginners | Mufaro D Kaseke",
+      "headline": "Git It Together: A Friendly Guide to Git & GitHub",
+      "description": "Learn Git and GitHub basics: set up Git, commit changes, push a repository, use everyday commands and collaborate with branches and pull requests.",
+      "published": "2025-04-19",
+      "keywords": ["Git", "GitHub", "version control", "beginner tutorial"],
+      "image": "/img/seo/git-github.png",
+      "imageAlt": "Cyan and magenta Git branches beside the title Git and GitHub for beginners, with a reading cat and Momo branding.",
+      "card": "git-github"
+    },
+    {
+      "path": "/blog/2024/5/tech_job_market_who_survives.html",
+      "file": "blog/2024/5/tech_job_market_who_survives.html",
+      "kind": "article",
+      "title": "2024 Tech Job Market | Mufaro D Kaseke",
+      "headline": "2024 Tech Job Market, who survives the crisis?",
+      "description": "A developer's perspective on the 2024 tech job market: layoffs, competition for junior roles, outsourcing, AI and preparing for a career in technology.",
+      "published": "2024-05-21",
+      "keywords": ["tech careers", "2024 job market", "software development"],
+      "image": "/img/seo/tech-job-market.png",
+      "imageAlt": "The title The tech job market beside a large 2024, an illustrative trend line and a curious cat on a Momo card.",
+      "card": "tech-job-market"
+    }
+  ]
+}

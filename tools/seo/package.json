@@ -1,0 +1,12 @@
+{
+  "name": "momo-seo-artwork",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Optional tooling for reproducible static social images; not required to serve the site.",
+  "scripts": {
+    "generate": "node ../../scripts/generate_seo_images.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  }
+}

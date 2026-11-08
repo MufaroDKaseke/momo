@@ -96,6 +96,14 @@
 .post-cover { margin-bottom: 56px; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
 .post-cover img { width: 100%; height: auto; aspect-ratio: 1200 / 420; object-fit: cover; }
 .post-cover.photo-cover img { object-position: center; }
+/* Transparent black-on-clear artwork (e.g. the CTF logo) needs a light panel to stay legible. */
+.logo-cover, .logo-art { background: #eef0f2; }
+.logo-cover img { object-fit: contain; padding: 24px 0; }
+.logo-art > img { object-fit: contain; padding: 40px; }
+/* Animated art swaps to its still frame when motion is paused or reduced (see js/effects.js). */
+.still-art { display: none; }
+:root[data-motion='paused'] .motion-art { display: none; }
+:root[data-motion='paused'] .still-art { display: block; }
 .reading-progress { position: absolute; left: 0; bottom: -3px; appearance: none; width: 100%; height: 3px; border: 0; color: var(--accent); background: var(--divider); }
 .reading-progress::-webkit-progress-bar { background: var(--divider); }
 .reading-progress::-webkit-progress-value { background: var(--accent); }
@@ -108,6 +116,11 @@
 .article-body ul { padding-left: 24px; margin-block: 18px 22px; }
 .article-body strong { color: var(--white); }
 .article-body a { text-decoration: underline; text-underline-offset: 3px; }
+.article-body blockquote { margin: 28px 0 30px; padding: 6px 0 6px 22px; border-left: 3px solid var(--accent); }
+.article-body blockquote p { margin: 0; color: var(--white); font-style: italic; }
+.article-figure { margin-block: 34px; }
+.article-figure img { width: auto; max-width: 100%; height: auto; margin-inline: auto; border: 1px solid var(--border); border-radius: 6px; }
+.article-figure figcaption { margin-top: 12px; color: var(--muted); font: 400 13px/1.6 var(--mono); text-align: center; text-wrap: balance; }
 .article-body :not(pre) > code { padding: 2px 5px; border-radius: 3px; color: var(--accent); background: #203944; font: 400 .82em/1.6 var(--mono); overflow-wrap: anywhere; }
 .table-of-contents { min-width: 0; }
 .table-of-contents > summary { list-style: none; color: var(--muted); font: 500 12px/1.5 var(--mono); text-transform: uppercase; letter-spacing: .14em; cursor: pointer; min-height: 32px; display: flex; justify-content: space-between; align-items: start; gap: 20px; }
@@ -278,6 +291,11 @@ a.pagination-card:hover { border-color: var(--purple); }
   .post-meta { gap: 20px; margin-bottom: 24px; font-size: 12px; }
   .post-cover { margin-inline: -20px; border-radius: 0; border-inline: 0; margin-bottom: 24px; }
   .post-cover img { aspect-ratio: 390 / 190; }
+  .logo-cover img { padding: 12px 0; }
+  .logo-art > img { padding: 24px; }
+  .article-body blockquote { padding-left: 16px; }
+  .article-figure { margin-block: 26px; }
+  .article-figure figcaption { font-size: 12px; }
   .article-layout { gap: 34px; }
   .table-of-contents { padding: 16px 18px; }
   .table-of-contents > summary { align-items: center; min-height: 20px; }

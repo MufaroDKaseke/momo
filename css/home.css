@@ -137,6 +137,8 @@ p { text-wrap: pretty; }
 .community-details p { margin-top: 8px; }
 .recent-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 32px; }
 .posts-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.post-card-latest { grid-column: 1 / -1; }
+.post-card-latest .eyebrow { color: var(--accent); }
 .post-card { display: flex; flex-direction: column; padding: 28px; color: var(--body); transition: border-color .2s, transform .2s; }
 .post-card:hover { border-color: var(--purple); transform: translateY(-3px); }
 .post-card .eyebrow { color: var(--muted); margin-bottom: 12px; }

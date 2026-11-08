@@ -12,6 +12,7 @@ ROUTES = {
     '/': 'index.html',
     '/blog/': 'blog/index.html',
     '/builds/': 'builds/index.html',
+    '/blog/2026/11/decoys_and_traps_built_for_robots.html': 'blog/2026/11/decoys_and_traps_built_for_robots.html',
     '/blog/2025/4/intro_to_git_and_github_101.html': 'blog/2025/4/intro_to_git_and_github_101.html',
     '/blog/2024/5/tech_job_market_who_survives.html': 'blog/2024/5/tech_job_market_who_survives.html',
     '/404.html': '404.html',
@@ -144,7 +145,7 @@ def main():
         ET.parse(svg)
     sitemap = ET.parse(ROOT / 'sitemap.xml')
     locations = {node.text for node in sitemap.findall('.//{*}loc')}
-    for route in list(ROUTES)[:5]:
+    for route in [route for route in ROUTES if route != '/404.html']:
         assert 'https://momo.co.zw' + route in locations, f'{route}: missing from sitemap'
     config = json.loads((ROOT / 'content/seo.json').read_text(encoding='utf-8'))
     origin = config['origin']
@@ -198,7 +199,7 @@ def main():
     assert {node.find('{*}loc').text for node in sitemap_urls} == {origin + page['path'] for page in config['pages']}, 'Sitemap includes non-content pages'
     for node in sitemap_urls:
         assert node.find('{http://www.google.com/schemas/sitemap-image/1.1}image/{http://www.google.com/schemas/sitemap-image/1.1}loc') is not None, 'Missing sitemap image'
-    print(f'PASS: {len(pages)} pages, {link_count} links, assets/anchors, metadata, 5 raster share images, favicons, author graphs, SVGs, indexing controls and image sitemap.')
+    print(f'PASS: {len(pages)} pages, {link_count} links, assets/anchors, metadata, {len(config["pages"])} raster share images, favicons, author graphs, SVGs, indexing controls and image sitemap.')
 
 
 if __name__ == '__main__':

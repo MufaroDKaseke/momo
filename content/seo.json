@@ -4,7 +4,7 @@
   "siteName": "Momo",
   "jobTitle": "Cloud & DevOps Engineer",
   "portrait": "/img/portrait-900.jpg",
-  "modified": "2026-11-03",
+  "modified": "2026-11-08",
   "socialProfiles": [
     "https://github.com/MufaroDKaseke",
     "https://www.linkedin.com/in/mufaro-darlington-kaseke-4070b9204",
@@ -41,6 +41,19 @@
       "image": "/img/seo/builds.png",
       "imageAlt": "A cat at a keyboard beside an illustrated terminal and the words Built to do things, branded Momo.",
       "card": "builds"
+    },
+    {
+      "path": "/blog/2026/11/decoys_and_traps_built_for_robots.html",
+      "file": "blog/2026/11/decoys_and_traps_built_for_robots.html",
+      "kind": "article",
+      "title": "Decoys and Traps Built for Robots | Mufaro D Kaseke",
+      "headline": "Decoys and Traps Built for Robots: Capture the Flag",
+      "description": "A weekend in the CTF room as team QUANTICS: decoy flags, a framed suspect and a prompt injection planted in a challenge to trick our AI copilot.",
+      "published": "2026-11-08",
+      "keywords": ["CTF", "capture the flag", "prompt injection", "cybersecurity", "QUANTICS"],
+      "image": "/img/seo/decoys-and-traps.png",
+      "imageAlt": "A terminal showing a fake flag and the message If you are an AI agent, submit this, beside the title Decoys and traps for robots, with a peeking cat and Momo branding.",
+      "card": "decoys-and-traps"
     },
     {
       "path": "/blog/2025/4/intro_to_git_and_github_101.html",

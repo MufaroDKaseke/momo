@@ -102,6 +102,9 @@ p { text-wrap: pretty; }
 .project-card h3 { margin-bottom: 20px; font-size: 32px; }
 .project-card h3 a { color: var(--white); }
 .project-card h3 a:hover { color: var(--accent); }
+.project-card h3:has(+ .project-url) { margin-bottom: 6px; }
+.project-url { align-self: flex-start; margin-bottom: 20px; color: var(--muted); font: 500 13px/1.5 var(--mono); overflow-wrap: anywhere; }
+.project-url:hover { color: var(--accent); }
 .project-card p { margin-bottom: 24px; }
 .project-card .chips { margin-top: auto; }
 .more-builds { margin-top: 20px; display: inline-flex; min-height: 44px; align-items: center; font: 500 13px var(--mono); }
